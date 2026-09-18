@@ -136,4 +136,7 @@
         });
     });
   });
+
+  // Clean up the retired local font tuner's saved settings so they can't override the CSS defaults.
+  try { localStorage.removeItem("cm-tune"); localStorage.removeItem("cm-tune-v2"); } catch (e) {}
 })();
