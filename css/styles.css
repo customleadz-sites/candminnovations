@@ -410,11 +410,10 @@ em { font-style: italic; }
 .trust span::before { content: "/"; color: var(--rust); font-family: var(--font-display); font-weight: var(--display-weight); -webkit-text-stroke: var(--display-stroke) currentColor; font-size: 1.1rem; line-height: 1; }
 /* phones: a tidy 2-column grid, slashes lined up on the left of each item */
 @media (max-width: 720px) {
-  .trust .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1rem; padding: 1rem 0; font-size: 0.82rem; letter-spacing: 0.06em; }
-  .trust span { display: flex; align-items: flex-start; gap: 0.5em; line-height: 1.25; }
-  .trust span::before { font-size: 1rem; line-height: 1.25; }
+  .trust .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 0.8rem; padding: 1rem 0; font-size: clamp(0.5rem, 3.3vw, 0.82rem); letter-spacing: 0.05em; }
+  .trust span { display: flex; align-items: center; gap: 0.5em; line-height: 1; white-space: nowrap; }  /* text scales with the screen so it never wraps */
+  .trust span::before { font-size: 1.2em; line-height: 1; }
 }
-@media (max-width: 360px) { .trust .wrap { grid-template-columns: 1fr; gap: 0.5rem; } }
 
 /* ---------- sections ---------- */
 .section { padding: clamp(4rem, 8vw, 7.5rem) 0; }
