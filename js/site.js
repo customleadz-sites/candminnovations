@@ -10,7 +10,17 @@
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
     document.querySelectorAll(".nav a").forEach(function (a) {
-      a.addEventListener("click", function () { document.body.classList.remove("nav-open"); });
+      a.addEventListener("click", function (e) {
+        // On phones the "Services" link opens its dropdown instead of navigating (the "All Services" item inside goes to the page).
+        var sub = a.parentElement;
+        if (sub && sub.classList.contains("has-sub") && window.matchMedia("(max-width: 980px)").matches) {
+          e.preventDefault();
+          var open = sub.classList.toggle("is-open");
+          a.setAttribute("aria-expanded", open ? "true" : "false");
+          return;
+        }
+        document.body.classList.remove("nav-open");
+      });
     });
   }
 
