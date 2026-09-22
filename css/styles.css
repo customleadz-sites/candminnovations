@@ -345,6 +345,16 @@ em { font-style: italic; }
 
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; align-items: start; min-height: 0; padding-top: 3.5rem; }
+  /* phones: a touch darker over the photo, bigger title on three lines, no eyebrow (the trust bar below covers it) */
+  .hero::before {
+    background:
+      linear-gradient(0deg, rgba(22, 24, 26, 0.2), rgba(22, 24, 26, 0.2)),
+      linear-gradient(90deg, rgba(22, 24, 26, 0.88) 0%, rgba(22, 24, 26, 0.72) 45%, rgba(22, 24, 26, 0.35) 100%),
+      linear-gradient(0deg, rgba(22, 24, 26, 0.85) 0%, rgba(22, 24, 26, 0) 40%);
+  }
+  .hero .eyebrow { display: none; }
+  .hero h1 { font-size: clamp(1.5rem, 10.5cqw, 3.2rem); }
+  .hero h1 em { display: block; }
 }
 
 /* form card (contact page) */
