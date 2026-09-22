@@ -138,6 +138,13 @@ em { font-style: italic; }
 .btn--ghost-light { color: var(--paper); border-color: var(--paper); }
 .btn--ghost:hover { background: var(--ink); color: var(--paper); }
 .btn--ghost-light:hover { background: var(--paper); color: var(--ink); }
+/* the slanted accent stripe (same as the orange CTA band) inside every outline button */
+.btn--ghost::before, .btn--ghost-light::before {
+  content: ""; position: absolute; top: -20%; bottom: -20%; right: 14%; width: 16%;
+  transform: skewX(-14deg); background: currentColor; opacity: 0.08; z-index: -1; pointer-events: none;
+  transition: opacity 0.25s var(--ease);
+}
+.btn--ghost:hover::before, .btn--ghost-light:hover::before { opacity: 0.14; }
 /* phone icon on call buttons */
 .btn[href^="tel:"]::after {
   content: ""; order: -1; width: 1.05em; height: 1.05em; flex: none; background: currentColor;
