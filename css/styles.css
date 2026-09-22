@@ -415,6 +415,12 @@ em { font-style: italic; }
   .trust span::before { font-size: 1.2em; line-height: 1; }
 }
 
+
+/* phones: stacked button pairs go full width with centered text */
+@media (max-width: 720px) {
+  .hero__actions .btn, .cta-band__actions .btn { width: 100%; justify-content: center; }
+  .hero__actions .hero__phone { width: 100%; text-align: center; }
+}
 /* ---------- sections ---------- */
 .section { padding: clamp(4rem, 8vw, 7.5rem) 0; }
 .section--tight { padding: clamp(3rem, 6vw, 5rem) 0; }
