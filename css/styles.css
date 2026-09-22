@@ -344,7 +344,7 @@ em { font-style: italic; }
 
 
 @media (max-width: 900px) {
-  .hero .wrap { grid-template-columns: 1fr; align-items: start; min-height: 0; padding-top: 3.5rem; }
+  .hero .wrap { grid-template-columns: 1fr; align-items: center; min-height: 0; padding-top: 4.5rem; padding-bottom: 4.5rem; min-height: 78vh; min-height: 78svh; }
   /* phones: a touch darker over the photo, bigger title on three lines, no eyebrow (the trust bar below covers it) */
   .hero::before {
     background:
