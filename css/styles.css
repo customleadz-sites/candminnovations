@@ -261,7 +261,12 @@ em { font-style: italic; }
 .nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
 .nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
+/* phone/tablet: the call button lives in the header (the dark top strip is hidden there) */
+.header__call { display: none; }
 @media (max-width: 980px) {
+  .topbar { display: none; }
+  .header .wrap { gap: 0.75rem; }
+  .header__call { display: inline-flex; margin-left: auto; padding: 0.7em 1em; font-size: 0.95rem; letter-spacing: 0.06em; white-space: nowrap; }
   .brand__text { display: none; }
   .header .wrap { height: 72px; }
   .brand__logo { width: 54px; height: 54px; }
@@ -326,7 +331,7 @@ em { font-style: italic; }
   min-height: min(calc(100svh - 184px), 760px);
 }
 .hero__copy { container-type: inline-size; min-width: 0; }
-.hero h1 { color: var(--white); max-width: none; font-size: calc(clamp(1.6rem, 8cqw, 4.2rem) * var(--hero-scale)); }
+.hero h1 { color: var(--white); max-width: none; font-size: calc(clamp(1.2rem, 8cqw, 4.2rem) * var(--hero-scale)); }
 .hero h1 span { display: block; white-space: nowrap; }
 .hero__lede { font-size: 1.1rem; max-width: 46ch; color: rgba(243, 239, 232, 0.86); margin-bottom: 1.8rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.8rem 1rem; align-items: center; }
