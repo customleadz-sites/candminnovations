@@ -815,6 +815,7 @@ em { font-style: italic; }
 .contact-info__value { font-family: var(--font-display); font-weight: var(--display-weight); -webkit-text-stroke: var(--display-stroke) currentColor; font-size: 1.7rem; line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase; }
 .contact-info__value a { text-decoration: none; }
 .contact-info__value a:hover { color: var(--rust); }
+@media (max-width: 720px) { .contact-info__value { font-weight: 600; -webkit-text-stroke: 0; font-size: 1.45rem; } } /* phones: lighter, a bit smaller */
 .contact-info__sub { font-size: 0.9rem; color: var(--steel); margin-top: 0.2rem; }
 .map { border: 0; width: 100%; height: 320px; border-radius: var(--radius); filter: grayscale(1) contrast(1.05); }
 
