@@ -34,7 +34,7 @@ Madison's feedback: too much text. Done locally 2026-10-01: home "How it works" 
 7. **Payment structure.** The site talks about trust and finishing the job but does NOT promise a payment schedule. If they bill per completed phase, saying so would be a killer trust point — confirm first.
 8. **"Also on the list" services** (pole barns, garages, built-ins) are inferred from photos + "etc." in the intake. Confirm.
 9. **Google Analytics** — none installed yet.
-10. **Domain:** `candminnovations.com` currently points to a dead Wix setup (Wix "ConnectYourDomain" error). All canonicals/sitemap/schema already use `https://www.candminnovations.com`. Until DNS is cut over, the SEO audit will flag that (expected). Need registrar login.
+10. **Domain: LIVE at https://www.candminnovations.com (connected 2026-10-01).** Registered at Wix (client's account); DNS stays at Wix — A @ → 76.76.21.21, CNAME www → cname.vercel-dns.com. Both hostnames are on the Vercel project; apex 308-redirects to www (set via API). Wix has a 90-day transfer lock, so moving the registrar can wait.
 
 ## Claims we ARE allowed to make (from intake)
 Licensed AND insured · free estimates · site visit + consultation for custom builds · residential · Dardanelle/Russellville · ~100-mile radius · Mon–Fri 7–5 · the two phones + email above. Nothing else is claimed.
