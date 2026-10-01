@@ -370,7 +370,7 @@ em { font-style: italic; }
       linear-gradient(90deg, rgba(22, 24, 26, 0.88) 0%, rgba(22, 24, 26, 0.72) 45%, rgba(22, 24, 26, 0.35) 100%),
       linear-gradient(0deg, rgba(22, 24, 26, 0.85) 0%, rgba(22, 24, 26, 0) 40%);
   }
-  .hero .eyebrow { display: none; }
+  .hero .eyebrow { margin-bottom: 0.5rem; } /* license number — shown on phones too */
   .hero__brand { font-size: clamp(1rem, 4.6cqw, 1.5rem); }
   .hero h1 { font-size: clamp(1.5rem, 10.5cqw, 3.2rem); }
   .hero h1 em { display: block; }
