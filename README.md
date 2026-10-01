@@ -33,7 +33,7 @@ Madison's feedback: too much text. Done locally 2026-10-01: home "How it works" 
 6. **Years in business / project count** — blank on intake, so nothing is claimed. Add when known.
 7. **Payment structure.** The site talks about trust and finishing the job but does NOT promise a payment schedule. If they bill per completed phase, saying so would be a killer trust point — confirm first.
 8. **"Also on the list" services** (pole barns, garages, built-ins) are inferred from photos + "etc." in the intake. Confirm.
-9. **Google Analytics** — GA4 property "C&M Innovations" under the Custom Leadz GA account (property 524863278 is the old selector; stream 15939801296), Measurement ID **G-EFYMSBDREF**, tag in the `<head>` of all 16 pages (added 2026-10-01). No conversion events defined yet — the form isn't wired, and calls can't be tracked without a number swap.
+9. **Google Analytics** — GA4 property "C&M Innovations" under the Custom Leadz GA account (stream 15939801296), Measurement ID **G-EFYMSBDREF**, tag in the `<head>` of all 16 pages (added 2026-10-01). No conversion events defined yet — the form isn't wired, and calls can't be tracked without a number swap.
 10. **Domain: LIVE at https://www.candminnovations.com (connected 2026-10-01).** Registered at Wix (client's account); DNS stays at Wix — A @ → 76.76.21.21, CNAME www → cname.vercel-dns.com. Both hostnames are on the Vercel project; apex 308-redirects to www (set via API). Wix has a 90-day transfer lock, so moving the registrar can wait.
 
 ## Claims we ARE allowed to make (from intake)
@@ -42,6 +42,7 @@ Licensed AND insured · free estimates · site visit + consultation for custom b
 ## Photos
 - Originals: `../assets/raw/` (HEIC) · converted JPGs: `../assets/photos/` · logo: `../assets/logo.png`
 - Web versions: `images/work/*.webp` (full ≤1800px, q70–78) + `*-sm.webp` thumbnails (≤800px). Hero images also have `-mobile.webp`.
+- Favicons: `/favicon.ico` (16/32/48) + `images/favicon-32.png`, `favicon.png` (64), `apple-touch-icon.png` (512), `icon-192.png` — all just the C/M letters, strokes thickened so they read at 16px (2026-10-01). Social image `images/og-image.jpg` = Madison's "social sharing image" (barndo at dusk, bottom kept, light wash, black logo + name). Search Console: domain property, verified via TXT at Wix; sitemap submitted 2026-10-01.
 - `images/logo.webp` (original white circle, used in header), `images/logo-mark.png` / `logo-mark-light.png` (white knocked out — ink and cream versions; cream is in the footer).
 - Mapping of IMG numbers → names is in the git history of this README's first commit / `../info/client-brief.md` photo inventory.
 
