@@ -12,7 +12,7 @@ Static marketing site for **C&M Innovations, LLC**, a residential general contra
 | `index.html` | `/` | Home — photo hero (form removed 2026-09-15, CTA → /contact), 4 service tiles, why-us, promise (trust), process, recent work, reviews container, service area, FAQ |
 | `services.html` | `/services` | Hub |
 | `custom-homes.html` `new-construction.html` `framing.html` `remodels-additions.html` | one page per service, 600+ words each, cost factors, photos, FAQ (with FAQ schema) |
-| `projects.html` | `/projects` | 10 groups of real job photos, lightbox |
+| `projects.html` | `/projects` | One filterable grid of 54 job photos (All / New Construction / Framing / Interior via `data-cat`), no captions, lightbox |
 | `about.html` | `/about` | Story in their words, promises, how we work, two phone contacts |
 | `contact.html` | `/contact` | Full lead form + details + map |
 | `blog.html` + 3 `blog-*.html` | starter posts (hiring questions / custom-home process / custom vs plans) |
@@ -21,10 +21,13 @@ Static marketing site for **C&M Innovations, LLC**, a residential general contra
 
 Header/footer are copied into every page (no includes). If you change the nav or footer, change it in all 16 files (find-and-replace works — they're identical).
 
+## Client revision round (call 2026-09-30, transcript in Wispr Flow "Meeting with madison")
+Madison's feedback: too much text. Done locally 2026-10-01: home "How it works" section removed; "What affects the cost" removed from all 4 service pages; service-page prose trimmed ~⅓ (FAQ left alone on purpose); Projects page rebuilt as one small-photo grid with category filters; "C&M Innovations" line (`.hero__brand`) above the home H1; 4th promise "Everything up to code"; hero photo → barndominium drone shot (`barndo-drone-1-hero.webp` + `-mobile`); Custom Homes tile → finished farmhouse; Blog removed from the header nav (still in footer, posts link back to service pages); Facebook link in footer + contact page + schema `sameAs`. **Still waiting on the license number** — goes in the home hero eyebrow next to "Licensed & Insured" (she'll text when it renews each year).
+
 ## ⚠️ Not done yet / needs the client
 1. **Form is NOT wired.** The contact-page form posts to Web3Forms but the key is the placeholder `YOUR_WEB3FORMS_KEY` (in `contact.html`; the home page no longer has a form). Until it's replaced, submitting shows the thank-you page but sends nothing. Get a key at web3forms.com for **candminnovations24@gmail.com** (the key email goes to that inbox, so Madison has to forward it — or set it up on a Kennedy-controlled email and forward). Then submit one real test.
 2. **Reviews:** none provided. Home has an honest "Ask us for references" container instead. Swap in real quotes when they come. Never invent any.
-3. **Google Business Profile link + Facebook links** — not provided. Add to footer + the `sameAs` array in the JSON-LD once known.
+3. **Google Business Profile link** — not provided yet (Facebook is done: https://www.facebook.com/profile.php?id=61565987790805). Add the GBP URL to `sameAs` once known.
 4. **Owners = Carter & Madison Henson** (photo `images/work/couple.webp`, from `../assets/photos/couple.jpeg`; on the About page with their Facebook welcome text, added 2026-09-17). Still unknown: which of them is the "General Contractor" vs "Operations Manager" phone.
 5. **Project locations/stories.** Every project group says "River Valley, AR". Ask Madison for the town and one line per house ("built for a family of five outside Dover…") — big SEO win.
 6. **Years in business / project count** — blank on intake, so nothing is claimed. Add when known.
