@@ -33,7 +33,7 @@ Madison's feedback: too much text. Done locally 2026-10-01: home "How it works" 
 6. **Years in business / project count** — blank on intake, so nothing is claimed. Add when known.
 7. **Payment structure.** The site talks about trust and finishing the job but does NOT promise a payment schedule. If they bill per completed phase, saying so would be a killer trust point — confirm first.
 8. **"Also on the list" services** (pole barns, garages, built-ins) are inferred from photos + "etc." in the intake. Confirm.
-9. **Google Analytics** — none installed yet.
+9. **Google Analytics** — GA4 property "C&M Innovations" under the Custom Leadz GA account (property 524863278 is the old selector; stream 15939801296), Measurement ID **G-EFYMSBDREF**, tag in the `<head>` of all 16 pages (added 2026-10-01). No conversion events defined yet — the form isn't wired, and calls can't be tracked without a number swap.
 10. **Domain: LIVE at https://www.candminnovations.com (connected 2026-10-01).** Registered at Wix (client's account); DNS stays at Wix — A @ → 76.76.21.21, CNAME www → cname.vercel-dns.com. Both hostnames are on the Vercel project; apex 308-redirects to www (set via API). Wix has a 90-day transfer lock, so moving the registrar can wait.
 
 ## Claims we ARE allowed to make (from intake)
