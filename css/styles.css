@@ -412,6 +412,11 @@ em { font-style: italic; }
 }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--rust); background: var(--white); }
 .field textarea { min-height: 96px; resize: vertical; }
+/* phone field with a fixed +1 country prefix (US numbers only) */
+.phone-wrap { display: flex; align-items: stretch; }
+.phone-prefix { display: flex; align-items: center; padding: 0 0.8em; border: 1px solid var(--line); border-right: 0; border-radius: 2px 0 0 2px; background: var(--paper-2); color: #54565b; font-family: var(--font-cond); font-weight: 600; font-size: 0.98rem; letter-spacing: 0.04em; }
+.phone-wrap input { flex: 1; min-width: 0; border-radius: 0 2px 2px 0; }
+.phone-wrap:focus-within .phone-prefix { border-color: var(--rust); }
 .form__note { font-size: 0.78rem; color: var(--stone); text-align: center; margin-top: 0.4rem; }
 .form__note a { color: inherit; }
 .hp { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }

@@ -115,6 +115,24 @@
      Posts in the background, then sends the visitor to /thank-you so the
      submission can be tracked later. The access key lives in the form's
      hidden "access_key" field — see README. */
+  /* US phone field: format as (479) 555-0100 while typing, US numbers only; "+1" is a fixed prefix and gets added on send. */
+  document.querySelectorAll("input[data-us-phone]").forEach(function (input) {
+    function format() {
+      var d = input.value.replace(/\D/g, "");
+      if (d.charAt(0) === "1") d = d.slice(1); // typed/pasted with the +1 country code (US area codes never start with 1)
+      d = d.slice(0, 10);
+      var out = d;
+      if (d.length > 6) out = "(" + d.slice(0, 3) + ") " + d.slice(3, 6) + "-" + d.slice(6);
+      else if (d.length > 3) out = "(" + d.slice(0, 3) + ") " + d.slice(3);
+      else if (d.length > 0) out = "(" + d;
+      input.value = out;
+      input.setCustomValidity(d.length === 10 && /^[2-9]/.test(d) && /^[2-9]/.test(d.slice(3)) ? "" : "Enter a 10-digit US phone number, e.g. (479) 555-0100");
+    }
+    input.addEventListener("input", format);
+    input.addEventListener("blur", format);
+    format();
+  });
+
   document.querySelectorAll("form[data-lead-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -134,7 +152,10 @@
       }
 
       if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = "Sending…"; }
-      fetch(action, { method: "POST", headers: { Accept: "application/json" }, body: new FormData(form) })
+      var data = new FormData(form);
+      var ph = form.querySelector("input[data-us-phone]");
+      if (ph && ph.value) data.set(ph.name, "+1 " + ph.value);
+      fetch(action, { method: "POST", headers: { Accept: "application/json" }, body: data })
         .then(function (r) { return r.json(); })
         .then(function (d) {
           if (d && d.success) done();

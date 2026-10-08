@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500..700&family=Bodoni+Moda:wght@500&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css?v=54" />
+<link rel="stylesheet" href="css/styles.css?v=55" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="C&amp;M Innovations" />
 <meta property="og:title" content="Contact C&amp;M Innovations — Free Estimates in the River Valley, AR" />
@@ -225,7 +225,7 @@
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <div class="form__row">
       <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" autocomplete="name" required /></div>
-      <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" pattern="^\(?[2-9][0-9]{2}\)?[\-.\s]?[2-9][0-9]{2}[\-.\s]?[0-9]{4}$" title="10-digit US phone number" required /></div>
+      <div class="field"><label for="f-phone">Phone</label><div class="phone-wrap"><span class="phone-prefix" aria-hidden="true">+1</span><input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="numeric" placeholder="(479) 555-0100" pattern="^\([2-9][0-9]{2}\) [2-9][0-9]{2}-[0-9]{4}$" title="10-digit US phone number, e.g. (479) 555-0100" data-us-phone required /></div></div>
     </div>
       <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" autocomplete="email" required /></div>
     <div class="form__row">
@@ -289,7 +289,7 @@
     </div>
   </div>
 </footer>
-<script src="js/site.js?v=6" defer></script>
+<script src="js/site.js?v=7" defer></script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
